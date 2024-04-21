@@ -112,7 +112,6 @@ public class Forest implements Serializable {
         try (FileOutputStream fileOut = new FileOutputStream(fileName);
              ObjectOutputStream objectOut = new ObjectOutputStream(fileOut)) {
             objectOut.writeObject(this);
-            System.out.println("Forest saved to file: " + fileName);
         } catch (IOException e) {
             System.out.println("Error saving forest to file: " + fileName);
         }

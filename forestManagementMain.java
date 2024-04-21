@@ -37,7 +37,6 @@ public class forestManagementMain {
                     case "a":
                         Tree randomTree = forest.generateRandomTree(); // Call the method from the Forest class
                         forest.addTree(randomTree);
-                        System.out.println("Randomly generated tree added to the forest.");
                         break;
                     case "c":
                         System.out.print("Tree number to cut down: ");
@@ -59,7 +58,7 @@ public class forestManagementMain {
                             double heightToReap = Double.parseDouble(scanner.nextLine());
                             forest.reapTrees(heightToReap);
                         } catch (NumberFormatException e) {
-                            System.out.println("Invalid input. Please enter a valid height.");
+                            System.out.println("That is not an integer");
                         }
                         break;
                     case "g":
@@ -73,7 +72,6 @@ public class forestManagementMain {
                         String forestNameToLoad = scanner.nextLine();
                         Forest loadedForest = Forest.loadForestFromFile(forestNameToLoad + ".db");
                         if (loadedForest != null) {
-                            System.out.println("Forest loaded successfully: " + loadedForest.getName());
                             forest = loadedForest;
                         } else {
                             System.out.println("Old forest retained");
