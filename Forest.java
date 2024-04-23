@@ -56,15 +56,6 @@ public class Forest implements Serializable {
         }
     }
 
-    public Forest getNextForest(ArrayList<Forest> allForests) {
-        int currentIndex = allForests.indexOf(this);
-        if (currentIndex == -1 || currentIndex == allForests.size() - 1) {
-            System.out.println("No next forest available.");
-            return null;
-        }
-        return allForests.get(currentIndex + 1);
-    }
-
     public ArrayList<Tree> getTrees() {
         return trees;
     }

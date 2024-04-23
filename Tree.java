@@ -23,20 +23,8 @@ public class Tree implements Serializable {
         return species;
     }
 
-    public int getYearOfPlanting() {
-        return yearOfPlanting;
-    }
-
     public double getHeight() {
         return height;
-    }
-
-    public void setHeight(double height) {
-        this.height = height;
-    }
-
-    public double getGrowthRate() {
-        return growthRate;
     }
 
     public void simulateGrowth() {
