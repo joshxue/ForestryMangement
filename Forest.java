@@ -31,13 +31,13 @@ public class Forest implements Serializable {
         } else {
             System.out.println("Invalid tree index.");
         }
-    }
+    } //cutTree method
 
     public void simulateYear() {
         for (Tree tree : trees) {
             tree.simulateGrowth();
         }
-    }
+    } //simulate year method
     public void reapTrees(double heightToReap) {
         ArrayList<Tree> treesToRemove = new ArrayList<>();
         for (Tree tree : trees) {
@@ -54,7 +54,7 @@ public class Forest implements Serializable {
             System.out.println("Replaced with new tree " + newTree);
             trees.add(newTree);
         }
-    }
+    } // reapTree mothod
 
     public ArrayList<Tree> getTrees() {
         return trees;
@@ -69,7 +69,7 @@ public class Forest implements Serializable {
         double height = Math.random() * 10 + 10;
         double growthRate = Math.random() * 10 + 10;
         return new Tree(randomSpecies, yearOfPlanting, height, growthRate);
-    }
+    } // generate random tree method
 
     public void printForest() {
         System.out.println("Forest name: " + name);
@@ -77,7 +77,7 @@ public class Forest implements Serializable {
             System.out.println("    " + i + " " + trees.get(i));
         }
         System.out.println("There are " + trees.size() + " trees, with an average height of " + String.format("%.2f", calculateAverageHeight()) + ".");
-    }
+    } // print forest method
 
     public double calculateAverageHeight() {
         double totalHeight = 0;
@@ -86,7 +86,7 @@ public class Forest implements Serializable {
         }
         return trees.isEmpty() ? 0 : totalHeight / trees.size();
 
-    }
+    } // calculate average height method
 
     public static Forest loadForestFromFile(String fileName) {
         try (FileInputStream fileIn = new FileInputStream(fileName);
@@ -96,7 +96,7 @@ public class Forest implements Serializable {
             System.out.println("Error loading forest from file: " + fileName);
             return null;
         }
-    }
+    } // load forest from file method
 
     public void saveForestToFile() {
         String fileName = name + ".db";
@@ -106,7 +106,7 @@ public class Forest implements Serializable {
         } catch (IOException e) {
             System.out.println("Error saving forest to file: " + fileName);
         }
-    }
+    } // save forest to file method
 
-}
+}//end of main
 

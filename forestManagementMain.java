@@ -98,7 +98,7 @@ public class forestManagementMain {
                 }
             }
         }
-    }
+    } //method to do main commands main method
 
     // Method to load forest from CSV file
     private static Forest loadForestFromCSV(String fileName) {
@@ -125,7 +125,7 @@ public class forestManagementMain {
             System.out.println("Error opening/reading " + fileName);
         }
         return forest;
-    }
+    } // loadForestFromCSV method
 
-}
+}// end of main
 
