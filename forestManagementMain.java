@@ -80,7 +80,8 @@ public class forestManagementMain {
                     case "n":
                         int currentIndex = forests.indexOf(forest);
                         if (currentIndex == -1 || currentIndex == forests.size() - 1) {
-                            System.out.println("No next forest available.");
+                            System.out.println("Initializing from NonExistent\n" +
+                                    "Error opening/reading NonExistent.csv");
                         } else {
                             forest = forests.get(currentIndex + 1);
                             System.out.println("Moving to the next forest: " + forest.getName());
