@@ -93,7 +93,7 @@ public class Forest implements Serializable {
              ObjectInputStream objectIn = new ObjectInputStream(fileIn)) {
             return (Forest) objectIn.readObject();
         } catch (IOException | ClassNotFoundException e) {
-            System.out.println("Error loading forest from file: " + fileName);
+            System.out.println("Error opening/reading " + fileName);
             return null;
         }
     } // load forest from file method
